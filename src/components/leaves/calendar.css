@@ -1,0 +1,10 @@
+button{
+    margin: 0%;
+    padding: 5px;
+}
+
+.leave_date{
+    background-color: rgb(220, 104, 104);
+    color: white;
+    width: auto;
+  }
