@@ -19,15 +19,10 @@ const Login = ({at}) => {
       console.log(data)
       // Handle successful login
       localStorage.setItem('access_token',data.access_token)
-      // console.log(at);
-
-      // Store access token securely (e.g., in local storage or context)
-
-      // Redirect to desired page upon successful login
       navigate('/leaves',);
     } catch (error) {
       // Handle login error
-      setError('Invalid email or password');
+      setError('Invalid email or password, Try to Register if not already registered');
     }
   };
 
@@ -52,6 +47,7 @@ const Login = ({at}) => {
         {error && <p>{error}</p>}
         <Button type="submit">Login</Button>
       </form>
+      <button onClick={()=>(navigate('/register'))}>Register</button>
     </div>
   );
 };
